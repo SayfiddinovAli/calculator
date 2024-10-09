@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+/* src/App.css */
+.container{
+  margin-top: 10vh;
+}
+.calculator {
+  
+  width: 320px;
+  margin: auto;
+  border: none;
+  border-radius: 20px;
+  background-color: #000000; /* Qora fon */
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display {
+  height: 80px;
+  background-color: #1a1a1a; /* Qora ton */
+  color: #ffffff; /* Oq rang */
+  border-radius: 10px;
+  font-size: 40px;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4d4d4d; /* Qora kulrang */
+  color: #ffffff; /* Oq rang */
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #666666; /* Oq va qora aralashmasi */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.operator {
+  background-color: #ff9800; /* To'q sariq */
+}
+
+.operator:hover {
+  background-color: #e68a00; /* Yorqin sariq */
+}
+
+.zero {
+  grid-column: span 2; /* 0 tugmasini ikki ustunga cho'zish */
+}
+.ac {
+  grid-column: span 3; /* 0 tugmasini ikki ustunga cho'zish */
+ background-color: rgb(172, 170, 170);
+ 
 }
